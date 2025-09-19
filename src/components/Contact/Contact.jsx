@@ -151,7 +151,7 @@ const Contact = () => {
                   value={formData.projectType}
                   onChange={handleChange}
                   required
-                  className={formData.projectType ? 'has-value' : ''}
+                  className={formData.projectType ? 'has-value' : 'form-group-options'}
                 >
                   <option value=""></option>
                   <option value="website">Website Development</option>

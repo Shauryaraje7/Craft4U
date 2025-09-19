@@ -30,7 +30,7 @@ const Footer = () => {
               <li><a href="#home" onClick={() => scrollToSection('home')}>Home</a></li>
               <li><a href="#services" onClick={() => scrollToSection('services')}>Services</a></li>
               <li><a href="#process" onClick={() => scrollToSection('process')}>Process</a></li>
-              <li><a href="#portfolio" onClick={() => scrollToSection('portfolio')}>Portfolio</a></li>
+              {/* <li><a href="#portfolio" onClick={() => scrollToSection('portfolio')}>Portfolio</a></li> */}
               <li><a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
             </ul>
           </div>
