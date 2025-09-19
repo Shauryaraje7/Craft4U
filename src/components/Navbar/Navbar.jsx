@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import logo from '../../assets/logofornav.png'
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,8 +31,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo" onClick={() => scrollToSection('home')}>
-          <span className="logo-icon">🚀</span>
-          <h2>Craft4U</h2>
+         <img  className='logofornav'  src={logo} alt="" />
         </div>
         
         <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
