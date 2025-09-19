@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
 import Process from './components/Process/Process';
+import Comparison from './components/Comparison/Comparison';
 import Portfolio from './components/Portfolio/Portfolio';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
+      <Comparison/>
       <Services />
       <Process />
       {/* <Portfolio /> */}

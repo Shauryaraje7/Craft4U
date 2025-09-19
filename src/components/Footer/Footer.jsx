@@ -1,5 +1,8 @@
 import React from 'react';
 import './Footer.css';
+import logo from '../../assets/logofornav.png'
+
+
 
 const Footer = () => {
   const scrollToSection = (sectionId) => {
@@ -15,16 +18,10 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <span className="logo-icon">🚀</span>
-              <h3>ProjectCraft</h3>
+    <img  className='logofornav'  src={logo} alt="" />
             </div>
             <p>Turning your ideas into digital reality with professional development services.</p>
-            <div className="footer-social">
-              <a href="#" className="social-link">📘</a>
-              <a href="#" className="social-link">📸</a>
-              <a href="#" className="social-link">🐦</a>
-              <a href="#" className="social-link">💼</a>
-            </div>
+           
           </div>
           
           <div className="footer-section">
@@ -52,9 +49,8 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Contact Info</h4>
             <ul>
-              <li>📧 hello@projectcraft.com</li>
-              <li>📞 +1 (555) 123-4567</li>
-              <li>📍 123 Tech Street, Innovation City</li>
+              <li>📧 craft4uu@gmail.com</li>
+            
             </ul>
           </div>
         </div>

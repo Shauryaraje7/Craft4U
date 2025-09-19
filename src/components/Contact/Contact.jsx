@@ -89,22 +89,12 @@ const Contact = () => {
                   </div>
                   <div className="info-content">
                     <h4>Email Us</h4>
-                    <p>hello@projectcraft.com</p>
+                    <p>craft4uu@gmail.com</p>
                     <span className="info-subtext">We'll respond within 24 hours</span>
                   </div>
                 </div>
                 
-                <div className="info-item">
-                  <div className="info-icon-wrapper">
-                    <div className="info-icon">📞</div>
-                    <div className="icon-pulse"></div>
-                  </div>
-                  <div className="info-content">
-                    <h4>Call Us</h4>
-                    <p>+1 (555) 123-4567</p>
-                    <span className="info-subtext">Mon-Fri from 9AM to 6PM</span>
-                  </div>
-                </div>
+      
                 
                 <div className="info-item">
                   <div className="info-icon-wrapper">
@@ -120,27 +110,6 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="social-section">
-              <h4>Follow Our Journey</h4>
-              <div className="social-links">
-                <a href="#" className="social-link">
-                  <span className="social-icon">📘</span>
-                  <span className="social-text">Facebook</span>
-                </a>
-                <a href="#" className="social-link">
-                  <span className="social-icon">📸</span>
-                  <span className="social-text">Instagram</span>
-                </a>
-                <a href="#" className="social-link">
-                  <span className="social-icon">🐦</span>
-                  <span className="social-text">Twitter</span>
-                </a>
-                <a href="#" className="social-link">
-                  <span className="social-icon">💼</span>
-                  <span className="social-text">LinkedIn</span>
-                </a>
-              </div>
-            </div>
           </div>
           
           <div className="contact-form-container glass-effect">
