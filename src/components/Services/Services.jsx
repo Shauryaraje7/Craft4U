@@ -13,7 +13,7 @@ const Services = () => {
       icon: "💻",
       features: ["Responsive Design", "Modern Frameworks", "SEO Optimized", "Fast Loading"],
       details: "Our website development service creates stunning, functional websites that represent your brand perfectly. We use modern frameworks like React and Next.js to build fast, SEO-optimized sites that convert visitors into customers. From simple landing pages to complex e-commerce platforms, we've got you covered.",
-      pricing: "Starting at $999",
+      pricing: "Starting at 2000rs",
       timeline: "2-4 weeks"
     },
     {
@@ -22,7 +22,7 @@ const Services = () => {
       icon: "📱",
       features: ["iOS & Android", "Cross-Platform", "User-Friendly", "App Store Ready"],
       details: "We develop beautiful, high-performance mobile applications using React Native and Flutter. Our apps are designed with user experience as the top priority, ensuring intuitive navigation and engagement. We handle the entire process from concept to deployment on app stores.",
-      pricing: "Starting at $2,499",
+      pricing: "Starting at 2000rs",
       timeline: "4-8 weeks"
     },
     {
@@ -31,7 +31,7 @@ const Services = () => {
       icon: "🎓",
       features: ["Documentation", "Source Code", "Presentation", "1-on-1 Support"],
       details: "Struggling with your computer science project? We provide comprehensive assistance with coding, documentation, and presentation preparation. Our experts will guide you through complex concepts and help you achieve academic success while ensuring you understand the material.",
-      pricing: "Starting at $199",
+      pricing: "Starting at 2000rs",
       timeline: "Varies by project"
     },
     {
@@ -40,7 +40,7 @@ const Services = () => {
       icon: "🎨",
       features: ["Wireframing", "Prototyping", "User Testing", "Modern Design"],
       details: "Our UI/UX design service focuses on creating interfaces that are not only visually stunning but also incredibly intuitive. We conduct user research, create wireframes and prototypes, and perform usability testing to ensure your product delivers an exceptional user experience.",
-      pricing: "Starting at $799",
+      pricing: "Starting at 2000rs",
       timeline: "2-3 weeks"
     },
     {
@@ -49,7 +49,7 @@ const Services = () => {
       icon: "💡",
       features: ["Tech Stack", "Architecture", "Planning", "Best Practices"],
       details: "Not sure which technology to use for your project? Our consultation service provides expert guidance on technology selection, system architecture, project planning, and implementation strategies. We'll help you avoid common pitfalls and set your project up for success.",
-      pricing: "$99/hour",
+      pricing: "2000rs",
       timeline: "As needed"
     },
     {
@@ -58,7 +58,7 @@ const Services = () => {
       icon: "🔧",
       features: ["Bug Fixes", "Updates", "Security", "24/7 Support"],
       details: "Keep your digital products running smoothly with our maintenance and support plans. We offer regular updates, security patches, bug fixes, and performance optimization. Choose from different tiers of support based on your needs, including 24/7 emergency support.",
-      pricing: "Starting at $99/month",
+      pricing: "Starting at 2000rs",
       timeline: "Ongoing"
     }
   ];
