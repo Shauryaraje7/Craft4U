@@ -88,9 +88,7 @@ const Hero = () => {
           </div>
           <div className="hero-main-card">
             <div className="main-card-content">
-              <div className="pulse-circle">
-                <div className="pulse-dot"></div>
-              </div>
+            
               <h3>Let's Build Something Amazing</h3>
               <p>Get a free consultation for your project idea today</p>
               <button className="btn-primary" onClick={() => scrollToSection('contact')}>

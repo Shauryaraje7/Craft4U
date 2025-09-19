@@ -254,15 +254,15 @@
 }
 
 .card-1 {
-  top: 10%;
-  left: 5%;
+  
+  
   animation: float 8s ease-in-out infinite;
   z-index: 3;
 }
 
 .card-2 {
   top: 50%;
-  right: 5%;
+  right: 15%;
   transform: translateY(-50%);
   animation: float 7s ease-in-out infinite 1s;
   z-index: 3;
@@ -277,8 +277,8 @@
 
 .hero-main-card {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 20%;
+  left: 70%;
   transform: translate(-50%, -50%);
   width: 320px;
   padding: 2.5rem 2rem;
@@ -295,21 +295,6 @@
   position: relative;
 }
 
-.pulse-circle {
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: pulse 2s infinite;
-  background: rgba(79, 70, 229, 0.2);
-  backdrop-filter: blur(5px);
-}
 
 .pulse-dot {
   width: 24px;
@@ -534,7 +519,7 @@
   .hero-orbit,
   .hero-particle,
   .floating-card,
-  .pulse-circle,
+
   .scroll-line,
   .typing-text {
     animation: none !important;
