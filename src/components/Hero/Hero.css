@@ -14,6 +14,7 @@
   justify-content: space-between;
   gap: 40px;
   width: 100%;
+
 }
 
 .hero-background {
@@ -502,6 +503,7 @@
 
 @media (max-width: 576px) {
   .hero-title {
+  margin-top: 15vh;
     font-size: 2rem;
   }
   
