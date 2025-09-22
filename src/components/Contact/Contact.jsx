@@ -13,6 +13,9 @@ const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
 
+  // Replace this with your actual Google Apps Script Web App URL
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkKvnd5vCFWYoHenep7kxlihiNVWiXY-e9UigRgFwJ-T7LLGhXXCBQ_Z-n5pPLqc3g/exec';
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -23,10 +26,29 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
     
-    // Simulate API call
     try {
+      console.log('Submitting form data:', formData);
+      
+      const response = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Important for Google Apps Script
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify({
+          ...formData,
+          formType: 'contact-page'
+        })
+      });
+      
+      // Since we're using no-cors, we can't read the response directly
+      // But we'll assume success if no error is thrown
+      
+      // Simulate delay to show loading state
       await new Promise(resolve => setTimeout(resolve, 2000));
+      
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -34,11 +56,14 @@ const Contact = () => {
         projectType: '',
         message: ''
       });
+      
+      console.log('Form submitted successfully');
+      
     } catch (error) {
+      console.error('Error submitting form:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
-      setTimeout(() => setSubmitStatus(null), 5000);
     }
   };
 
@@ -94,8 +119,6 @@ const Contact = () => {
                   </div>
                 </div>
                 
-      
-                
                 <div className="info-item">
                   <div className="info-icon-wrapper">
                     <div className="info-icon">💬</div>
@@ -109,7 +132,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
           </div>
           
           <div className="contact-form-container glass-effect">
@@ -128,6 +150,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className={formData.name ? 'has-value' : ''}
+                  disabled={isSubmitting}
                 />
                 <label htmlFor="name">Full Name</label>
               </div>
@@ -141,6 +164,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className={formData.email ? 'has-value' : ''}
+                  disabled={isSubmitting}
                 />
                 <label htmlFor="email">Email Address</label>
               </div>
@@ -151,7 +175,8 @@ const Contact = () => {
                   value={formData.projectType}
                   onChange={handleChange}
                   required
-                  className={formData.projectType ? 'has-value' : 'form-group-options'}
+                  className={formData.projectType ? 'has-value' : ''}
+                  disabled={isSubmitting}
                 >
                   <option value=""></option>
                   <option value="website">Website Development</option>
@@ -172,13 +197,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className={formData.message ? 'has-value' : ''}
+                  disabled={isSubmitting}
                 ></textarea>
                 <label htmlFor="message">Project Details</label>
               </div>
               
               <button 
                 type="submit" 
-                className={`submit-btn ${isSubmitting ? 'submitting' : ''} ${submitStatus}`}
+                className={`submit-btn ${isSubmitting ? 'submitting' : ''}`}
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
@@ -199,14 +225,14 @@ const Contact = () => {
               {submitStatus === 'success' && (
                 <div className="submit-message success">
                   <span>✓</span>
-                  Thank you! Your message has been sent successfully.
+                  Thank you! Your message has been sent successfully. Check your email for confirmation.
                 </div>
               )}
               
               {submitStatus === 'error' && (
                 <div className="submit-message error">
                   <span>⚠</span>
-                  Something went wrong. Please try again.
+                  Something went wrong. Please try again or contact us directly at craft4uu@gmail.com
                 </div>
               )}
             </form>
