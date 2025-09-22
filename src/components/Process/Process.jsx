@@ -1,157 +1,131 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Process.css';
 
 const Process = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-  
+
   const steps = [
     {
       step: "01",
-      title: "Discovery & Consultation",
-      description: "We begin with an in-depth discovery session to understand your vision, goals, and requirements.",
-      icon: "🔍",
-      color: "#6366f1"
+      title: "Submit Your Idea",
+      description: "Share your vision through our intuitive form or schedule a discovery call.",
+      icon: "📝",
+      color: "#4f46e5"
     },
     {
       step: "02",
-      title: "Strategy & Planning",
-      description: "Our team crafts a comprehensive strategy and detailed project roadmap tailored to your needs.",
-      icon: "📊",
-      color: "#8b5cf6"
+      title: "Consultation & Strategy",
+      description: "We analyze your needs, propose tailored solutions, and craft a detailed plan.",
+      icon: "🤝",
+      color: "#7c3aed"
     },
     {
       step: "03",
-      title: "Design & Prototyping",
-      description: "We create stunning visual designs and interactive prototypes for your approval.",
-      icon: "🎨",
-      color: "#ec4899"
+      title: "Proposal & Agreement",
+      description: "Receive a clear, itemized quote and project timeline for approval.",
+      icon: "📋",
+      color: "#db2777"
     },
     {
       step: "04",
-      title: "Development",
-      description: "Expert developers bring your project to life using cutting-edge technologies.",
+      title: "Development Phase",
+      description: "Our team builds your solution with regular updates and agile sprints.",
       icon: "💻",
-      color: "#10b981"
+      color: "#059669"
     },
     {
       step: "05",
-      title: "Testing & Quality Assurance",
-      description: "Rigorous testing ensures your product meets the highest quality standards.",
-      icon: "✅",
-      color: "#f59e0b"
+      title: "Review & Refinement",
+      description: "Test the product, provide feedback, and we'll refine until it's perfect.",
+      icon: "🔍",
+      color: "#d97706"
     },
     {
       step: "06",
       title: "Launch & Support",
-      description: "We deploy your solution and provide ongoing support for optimal performance.",
+      description: "We deploy your project and offer ongoing support for success.",
       icon: "🚀",
-      color: "#3b82f6"
+      color: "#2563eb"
     }
   ];
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+    const handleScroll = () => {
+      const element = document.getElementById('process');
+      if (element) {
+        const position = element.getBoundingClientRect();
+        if (position.top < window.innerHeight * 0.8) {
           setIsVisible(true);
           
-          // Animate steps sequentially
-          let currentStep = 0;
-          const stepInterval = setInterval(() => {
-            setActiveStep(currentStep);
-            currentStep++;
-            if (currentStep >= steps.length) {
-              clearInterval(stepInterval);
-            }
+          const interval = setInterval(() => {
+            setActiveStep(prev => {
+              if (prev >= steps.length - 1) {
+                clearInterval(interval);
+                return prev;
+              }
+              return prev + 1;
+            });
           }, 400);
+          
+          return () => clearInterval(interval);
         }
-      },
-      { threshold: 0.3 }
-    );
+      }
+    };
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
 
-    return () => observer.disconnect();
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [steps.length]);
 
   return (
-    <section id="process" className="process section" ref={sectionRef}>
-      <div className="process-background">
-        <div className="process-grid"></div>
-        <div className="process-glow process-glow-1"></div>
-        <div className="process-glow process-glow-2"></div>
+    <section id="process" className="process">
+      <div className="process-bg">
+        <div className="process-orbit orbit-1"></div>
+        <div className="process-orbit orbit-2"></div>
+        <div className="process-particle particle-1"></div>
+        <div className="process-particle particle-2"></div>
       </div>
       
       <div className="container">
         <div className="process-header">
-          <span className="section-label">Our Workflow</span>
-          <h2 className="section-title">Streamlined Development Process</h2>
-          <p className="section-subtitle">
-            A proven methodology that transforms your vision into exceptional digital solutions
-          </p>
+          <h2>Our Process</h2>
+          <p>Transforming your ideas into reality with a proven, seamless approach</p>
         </div>
         
-        <div className={`process-steps ${isVisible ? 'visible' : ''}`}>
-          <div className="process-line"></div>
+        <div className={`process-timeline ${isVisible ? 'visible' : ''}`}>
+          <div className="timeline-line"></div>
           
-          <div className="steps-container">
-            {steps.map((step, index) => (
-              <div 
-                key={index}
-                className={`process-step ${index <= activeStep ? 'active' : ''} ${
-                  index % 2 === 0 ? 'left' : 'right'
-                }`}
-                onMouseEnter={() => setActiveStep(index)}
-              >
-                <div className="step-indicator">
-                  <div className="step-number">{step.step}</div>
-                  <div 
-                    className="step-icon-container"
-                    style={{ '--step-color': step.color }}
-                  >
-                    <div className="step-icon">{step.icon}</div>
-                    <div className="step-glow"></div>
-                  </div>
-                </div>
-                
-                <div className="step-content">
-                  <div 
-                    className="step-card"
-                    style={{ '--step-color': step.color }}
-                  >
-                    <div className="step-header">
-                      <span className="step-badge">Step {step.step}</span>
-                      <h3 className="step-title">{step.title}</h3>
-                    </div>
-                    <p className="step-description">{step.description}</p>
-                    <div className="step-arrow"></div>
-                  </div>
+          {steps.map((item, index) => (
+            <div 
+              key={index} 
+              className={`process-step ${index <= activeStep ? 'active' : ''}`}
+              style={{ '--step-color': item.color }}
+              onMouseEnter={() => setActiveStep(index)}
+              onFocus={() => setActiveStep(index)}
+            >
+              <div className="step-marker">
+                <span className="step-number">{item.step}</span>
+                <div className="step-icon-wrapper">
+                  <span className="step-icon">{item.icon}</span>
+                  <div className="step-glow"></div>
                 </div>
               </div>
-            ))}
-          </div>
+              
+              <div className="step-card">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <div className="step-connector"></div>
+              </div>
+            </div>
+          ))}
         </div>
         
         <div className="process-cta">
-          <div className="cta-content">
-            <h3>Ready to Start Your Project?</h3>
-            <p>Let's discuss how our process can bring your ideas to life</p>
-            <div className="cta-buttons">
-              <button className="btn btn-primary">
-                <span>Begin Your Journey</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-              <button className="btn btn-secondary">
-                View Case Studies
-              </button>
-            </div>
-          </div>
+          <h3>Ready to Bring Your Vision to Life?</h3>
+          <p>Partner with us to create something extraordinary</p>
+          <button className="cta-button">Start Your Project</button>
         </div>
       </div>
     </section>
