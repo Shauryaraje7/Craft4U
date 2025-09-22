@@ -48,7 +48,7 @@ const Portfolio = () => {
     },
     {
       title: "Inventory Management",
-      category: "college",
+      category: "ai and ml",
       description: "System for small business inventory tracking with reporting features",
       image: "📦",
       technologies: ["Python", "Django", "SQLite", "Bootstrap"],
@@ -76,7 +76,7 @@ const Portfolio = () => {
     { key: 'all', label: 'All Projects', count: projects.length },
     { key: 'web', label: 'Web Development', count: projects.filter(p => p.category === 'web').length },
     { key: 'mobile', label: 'Mobile Apps', count: projects.filter(p => p.category === 'mobile').length },
-    { key: 'college', label: 'College Projects', count: projects.filter(p => p.category === 'college').length }
+    { key: 'college', label: 'ai and ml', count: projects.filter(p => p.category === 'college').length }
   ];
 
   const filteredProjects = activeFilter === 'all' 

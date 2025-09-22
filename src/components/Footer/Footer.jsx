@@ -40,7 +40,7 @@ const Footer = () => {
             <ul>
               <li><a href="#services">Web Development</a></li>
               <li><a href="#services">Mobile Applications</a></li>
-              <li><a href="#services">College Projects</a></li>
+              <li><a href="#services">ai and ml</a></li>
               <li><a href="#services">UI/UX Design</a></li>
               <li><a href="#services">Project Consultation</a></li>
             </ul>

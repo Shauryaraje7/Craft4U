@@ -9,8 +9,8 @@ const Comparison = () => {
       category: 'web',
       title: 'Website Development',
       icon: '💻',
-      marketPrice: '₹15,000',
-      yourPrice: '₹2,500',
+      marketPrice: '₹14,999',
+      yourPrice: '₹999',
       savings: '83%'
     },
     {
@@ -18,15 +18,15 @@ const Comparison = () => {
       title: 'Mobile Applications',
       icon: '📱',
       marketPrice: '₹25,000',
-      yourPrice: '₹4,500',
+      yourPrice: '₹2,999',
       savings: '82%'
     },
     {
-      category: 'college',
-      title: 'College Projects',
+      category: 'ai and ml ',
+      title: 'AI & ML Projects',
       icon: '🎓',
       marketPrice: '₹8,000',
-      yourPrice: '₹1,500',
+      yourPrice: '₹1,499',
       savings: '81%'
     },
     {
@@ -34,15 +34,15 @@ const Comparison = () => {
       title: 'UI/UX Design',
       icon: '🎨',
       marketPrice: '₹12,000',
-      yourPrice: '₹2,000',
+      yourPrice: '₹799',
       savings: '83%'
     },
     {
       category: 'consultation',
-      title: 'Project Consultation',
+      title: 'IOT',
       icon: '💡',
       marketPrice: '₹3,000',
-      yourPrice: '₹500',
+      yourPrice: '₹599',
       savings: '83%'
     },
     {
@@ -59,7 +59,7 @@ const Comparison = () => {
     { id: 'all', label: 'All Services' },
     { id: 'web', label: 'Web Development' },
     { id: 'mobile', label: 'Mobile Apps' },
-    { id: 'college', label: 'College Projects' }
+    { id: 'ai and ml', label: 'ai and ml' }
   ];
 
   const filteredServices = activeCategory === 'all' 

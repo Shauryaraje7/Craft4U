@@ -128,7 +128,7 @@ const PopupForm = ({ isOpen, onClose }) => {
               <option value="">Select Project Type</option>
               <option value="web-development">💻 Website Development</option>
               <option value="mobile-app">📱 Mobile Application</option>
-              <option value="college-project">🎓 College Project</option>
+              <option value="college-project">🎓 AI and ML</option>
               <option value="ui-ux">🎨 UI/UX Design</option>
               <option value="consultation">💡 Project Consultation</option>
               <option value="maintenance">🔧 Maintenance & Support</option>

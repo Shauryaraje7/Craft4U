@@ -26,7 +26,7 @@ const Services = () => {
       timeline: "4-8 weeks"
     },
     {
-      title: "College Projects",
+      title: "AL and ML",
       description: "Help with academic projects, thesis websites, and programming assignments.",
       icon: "🎓",
       features: ["Documentation", "Source Code", "Presentation", "1-on-1 Support"],

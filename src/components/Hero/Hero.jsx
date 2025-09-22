@@ -83,7 +83,7 @@ const Hero = () => {
           </div>
           <div className="floating-card card-3">
             <div className="card-icon">🎓</div>
-            <h4>College Projects</h4>
+            <h4>ai and ml</h4>
             <p>Academic excellence</p>
           </div>
           <div className="hero-main-card">
