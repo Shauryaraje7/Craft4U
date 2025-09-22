@@ -14,7 +14,7 @@ const Services = () => {
       features: ["Responsive Design", "Modern Frameworks", "SEO Optimized", "Fast Loading"],
       details: "Our website development service creates stunning, functional websites that represent your brand perfectly. We use modern frameworks like React and Next.js to build fast, SEO-optimized sites that convert visitors into customers. From simple landing pages to complex e-commerce platforms, we've got you covered.",
       pricing: "Starting at 999rs",
-      timeline: "2-4 weeks"
+      timeline: "As needed"
     },
     {
       title: "Mobile Applications",
@@ -23,7 +23,7 @@ const Services = () => {
       features: ["iOS & Android", "Cross-Platform", "User-Friendly", "App Store Ready"],
       details: "We develop beautiful, high-performance mobile applications using React Native and Flutter. Our apps are designed with user experience as the top priority, ensuring intuitive navigation and engagement. We handle the entire process from concept to deployment on app stores.",
       pricing: "Starting at 1999rs",
-      timeline: "4-8 weeks"
+      timeline: "As needed"
     },
     {
       title: "AL and ML",
@@ -41,7 +41,7 @@ const Services = () => {
       features: ["Wireframing", "Prototyping", "User Testing", "Modern Design"],
       details: "Our UI/UX design service focuses on creating interfaces that are not only visually stunning but also incredibly intuitive. We conduct user research, create wireframes and prototypes, and perform usability testing to ensure your product delivers an exceptional user experience.",
       pricing: "Starting at  499rs",
-      timeline: "2-3 weeks"
+      timeline: "As needed"
     },
     {
       title: "IOT",
