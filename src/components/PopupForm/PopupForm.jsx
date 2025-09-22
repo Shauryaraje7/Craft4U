@@ -130,7 +130,7 @@ const PopupForm = ({ isOpen, onClose }) => {
               <option value="mobile-app">📱 Mobile Application</option>
               <option value="college-project">🎓 AI and ML</option>
               <option value="ui-ux">🎨 UI/UX Design</option>
-              <option value="consultation">💡 Project Consultation</option>
+              <option value="consultation">💡 IOT</option>
               <option value="maintenance">🔧 Maintenance & Support</option>
             </select>
           </div>

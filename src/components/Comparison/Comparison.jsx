@@ -18,7 +18,7 @@ const Comparison = () => {
       title: 'Mobile Applications',
       icon: '📱',
       marketPrice: '₹25,000',
-      yourPrice: '₹2,999',
+      yourPrice: '₹1,999',
       savings: '82%'
     },
     {
@@ -26,7 +26,7 @@ const Comparison = () => {
       title: 'AI & ML Projects',
       icon: '🎓',
       marketPrice: '₹8,000',
-      yourPrice: '₹1,499',
+      yourPrice: '₹999',
       savings: '81%'
     },
     {
@@ -34,15 +34,15 @@ const Comparison = () => {
       title: 'UI/UX Design',
       icon: '🎨',
       marketPrice: '₹12,000',
-      yourPrice: '₹799',
+      yourPrice: '₹499',
       savings: '83%'
     },
     {
-      category: 'consultation',
+      category: 'iot',
       title: 'IOT',
       icon: '💡',
       marketPrice: '₹3,000',
-      yourPrice: '₹599',
+      yourPrice: '₹999',
       savings: '83%'
     },
     {
@@ -50,7 +50,7 @@ const Comparison = () => {
       title: 'Maintenance & Support',
       icon: '🔧',
       marketPrice: '₹5,000/mo',
-      yourPrice: '₹1,000/mo',
+      yourPrice: '₹499/mo',
       savings: '80%'
     }
   ];

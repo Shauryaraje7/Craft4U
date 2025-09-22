@@ -183,7 +183,7 @@ const Contact = () => {
                   <option value="mobile-app">Mobile Application</option>
                   <option value="ai and ml">ai and ml</option>
                   <option value="ui-design">UI/UX Design</option>
-                  <option value="consultation">Project Consultation</option>
+                  <option value="consultation">IOT</option>
                   <option value="other">Other</option>
                 </select>
                 <label htmlFor="projectType">Project Type</label>
