@@ -10,7 +10,7 @@ const Comparison = () => {
       title: 'Website Development',
       icon: '💻',
       marketPrice: '₹14,999',
-      yourPrice: '₹999',
+      yourPrice: '₹1999',
       savings: '83%'
     },
     {
