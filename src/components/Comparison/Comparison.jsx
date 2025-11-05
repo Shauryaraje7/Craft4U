@@ -26,7 +26,7 @@ const Comparison = () => {
       title: 'AI & ML Projects',
       icon: '🎓',
       marketPrice: '₹8,000',
-      yourPrice: '₹999',
+      yourPrice: '₹1999',
       savings: '81%'
     },
     {
